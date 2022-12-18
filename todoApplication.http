@@ -1,0 +1,49 @@
+
+GET http://localhost:3006/todos/
+
+
+###
+GET http://localhost:3006/todos/10/
+
+###
+
+POST http://localhost:3006/todos/
+Content-Type: application/json
+
+{
+  "id": 10,
+  "todo": "Finalize event theme",
+  "priority": "LOW",
+  "status": "TO DO"
+}
+
+###
+
+# PUT http://localhost:3006/todos/1/
+
+# Content-Type: "application/json"
+# {
+#   "status": "DONE"
+# }
+
+###
+PUT http://localhost:3006/todos/10/
+
+Content-Type: application/json
+{
+  "status": "DONE",
+  "priority": "HIGH",
+  "todo": "Some task"
+
+}
+
+# PUT http://localhost:3006/todos/4/
+
+# Content-Type: "application/json"
+# {
+#   "todo": "Some task"
+# }
+
+
+###
+DELETE http://localhost:3006/todos/1/
